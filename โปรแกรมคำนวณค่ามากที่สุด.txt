@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float Num1 = float.Parse(txtnum1.Text); ///change name textBox to is txtnum1
+            float Num2 = float.Parse(txtnum2.Text); ///change name textBox to is txtnum2
+            float Num3 = float.Parse(txtnum3.Text); ///change name textBox to is txtnum3
+            if (Num1 > Num2 & Num1 > Num3){ MessageBox.Show("ตัวเลขที่ 1 คือตัวเลขที่มากที่สุด คือเลข "+ Num1); }
+            else if (Num2 > Num1 & Num2 > Num3) { MessageBox.Show("ตัวเลขที่ 2 คือตัวเลขที่มากที่สุด คือเลข " + Num2); }
+            else if (Num3 > Num1 & Num3 > Num2) { MessageBox.Show("ตัวเลขที่ 3 คือตัวเลขที่มากที่สุด คือเลข " + Num3); }
+            else if (Num1 == Num2 & Num1 > Num3 ) { MessageBox.Show("ตัวเลขที่ 1 และ 2 คือตัวเลขที่มากที่สุด คือเลข " + Num1); }
+            else if (Num1 == Num3 & Num1 > Num2) { MessageBox.Show("ตัวเลขที่ 3 คือตัวเลขที่มากที่สุด คือเลข " + Num3); }
+            else if (Num3 == Num2 & Num2 > Num1) { MessageBox.Show("ตัวเลขที่ 2 และ 3 คือตัวเลขที่มากที่สุด คือเลข " + Num2); }
+            else { MessageBox.Show("ทั้ง 3 ตัวเลขเท่ากัน คือเลข " + Num1); }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
