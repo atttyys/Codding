@@ -24,8 +24,8 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-           float N1 = float.Parse(txtnum1.Text);
-           float N2 = float.Parse(txtnum2.Text);
+           float N1 = float.Parse(txtnum1.Text); ///change name TextBox to is txtnum1
+           float N2 = float.Parse(txtnum2.Text); ///change name TextBox to is txtnum2
            float G = N1+N2;            
             if(G <= 100 && G >= 80) { MessageBox.Show("เกรดของคุณคือA"); }
             else if (G <= 79 && G >= 70) { MessageBox.Show("เกรดของคุณคือB"); }
