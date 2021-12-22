@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           float N1 = float.Parse(txtnum1.Text);
+           float N2 = float.Parse(txtnum2.Text);
+           float G = N1+N2;            
+            if(G <= 100 && G >= 80) { MessageBox.Show("เกรดของคุณคือA"); }
+            else if (G <= 79 && G >= 70) { MessageBox.Show("เกรดของคุณคือB"); }
+            else if (G <= 69 && G >= 60) { MessageBox.Show("เกรดของคุณคือC"); }
+            else if (G <= 59 && G >= 50) { MessageBox.Show("เกรดของคุณคือD"); }
+            else if (G <= 49 && G > 0) { MessageBox.Show("เกรดของคุณคือF"); }
+            else { MessageBox.Show("N"); }
+        }
+    }
+}
